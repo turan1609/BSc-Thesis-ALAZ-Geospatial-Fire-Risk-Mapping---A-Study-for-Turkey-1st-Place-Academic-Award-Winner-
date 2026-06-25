@@ -15,7 +15,7 @@ You are free to use, modify, and integrate this methodology into your own resear
 
 Sincerely,  
 **Yusuf Turan**
-
+---
 
 Welcome to the official repository of the **ALAZ Decision Support System**, my B.Sc. Thesis project in Computer Engineering at Aydın Adnan Menderes University. 
 

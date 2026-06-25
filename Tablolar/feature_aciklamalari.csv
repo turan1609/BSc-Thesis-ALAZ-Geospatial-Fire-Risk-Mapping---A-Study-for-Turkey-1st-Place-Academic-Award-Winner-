@@ -1,0 +1,49 @@
+﻿Feature,Domain,Description
+M_T_Celsius,Meteorology,2m air temperature (°C) from ERA5-Land reanalysis at noon
+M_Dewpoint_C,Meteorology,2m dewpoint temperature (°C) — indicates atmospheric moisture content
+M_Wind_Speed,Meteorology,"10m wind speed (m/s), derived from U and V components: sqrt(u2+v2)"
+M_RH_Percent,Meteorology,Relative humidity (%) computed via Magnus formula from T and dewpoint
+M_SurfPressure,Meteorology,Surface atmospheric pressure (hPa) from ERA5-Land
+M_Soil_L1,Meteorology,"Volumetric soil water content in layer 1 (0–7 cm depth, m³/m³)"
+M_VPD_kPa,Meteorology,Vapor Pressure Deficit (kPa) — atmospheric drying power on vegetation
+M_Precip_7Day,Meteorology,Cumulative precipitation over the preceding 7 days (mm)
+M_Precip_30Day,Meteorology,Cumulative precipitation over the preceding 30 days (mm)
+M_Precip_90Day,Meteorology,Cumulative precipitation over the preceding 90 days (mm)
+M_Days_Since_Rain,Meteorology,Consecutive dry days (days since last >=1mm precipitation event)
+FWI_FFMC,Fire Weather,"Fine Fuel Moisture Code — surface litter moisture, fast response (~2/3 day)"
+FWI_DMC,Fire Weather,Duff Moisture Code — moderate-depth organic moisture (~15-day lag)
+FWI_DC,Fire Weather,Drought Code — deep soil/organic dryness indicator (~52-day memory)
+FWI_ISI,Fire Weather,"Initial Spread Index — rate of fire spread, coupling wind and FFMC"
+FWI_BUI,Fire Weather,"Build-Up Index — total fuel available, combining DMC and DC"
+FWI_Final,Fire Weather,Fire Weather Index — final composite danger rating
+NDVI,Vegetation,Normalized Difference Vegetation Index from MODIS Terra MOD13Q1 (250m)
+perc_tree,Land Cover,Percentage of tree cover within the H3 grid cell (from CORINE 2018)
+perc_shrub_grass,Land Cover,Percentage of shrub/grassland cover within the H3 grid cell
+perc_agri,Land Cover,Percentage of agricultural land within the H3 grid cell
+perc_water,Land Cover,Percentage of water bodies within the H3 grid cell
+elevation,Topography,Mean elevation (m) within H3 polygon from SRTM 30m DEM
+slope_mean,Topography,Mean terrain slope (degrees) from SRTM 30m DEM
+northness,Topography,Cosine of aspect angle — north-facing slope indicator
+eastness,Topography,Sine of aspect angle — east-facing slope indicator
+days_since_last_fire,Anthropogenic,Days elapsed since the last recorded fire in the same grid cell
+dist_road_all,Anthropogenic,Distance (m) to nearest road of any type from OpenStreetMap
+dist_road_forest,Anthropogenic,Distance (m) to nearest forest/track road from OpenStreetMap
+dist_settlement,Anthropogenic,Distance (m) to nearest populated settlement from OpenStreetMap
+log_dist_road,Anthropogenic,Log-transformed distance to nearest road (normalizes skewed distribution)
+log_dist_forest,Anthropogenic,Log-transformed distance to nearest forest road
+log_dist_settlement,Anthropogenic,Log-transformed distance to nearest settlement
+I_FWI_x_NDVI,Interaction,FWI × NDVI — captures when dangerous weather meets stressed vegetation
+I_FWI_x_Wind,Interaction,FWI × Wind Speed — amplifies risk when wind accelerates fire spread
+I_VPD_x_DryDays,Interaction,VPD × Dry Days — cumulative atmospheric-soil drying stress
+I_Dewpoint_x_Wind,Interaction,Dewpoint × Wind — nocturnal moisture recovery disrupted by wind
+I_FWI_x_NDVI_CON,Interaction,Region-specific FWI×NDVI term for Continental zone fire dynamics
+I_Wind_x_RoadDist,Interaction,Wind × Road Distance — human access under wind-driven fire conditions
+T_month_sin,Temporal,Sine encoding of month — captures cyclical seasonality
+T_month_cos,Temporal,Cosine encoding of month — captures cyclical seasonality
+T_doy_sin,Temporal,Sine encoding of day-of-year — fine-grained seasonal signal
+T_doy_cos,Temporal,Cosine encoding of day-of-year — fine-grained seasonal signal
+wind_sin,Meteorology,Sine of wind direction — directional wind component
+wind_cos,Meteorology,Cosine of wind direction — directional wind component
+chimney_index,Topography,Topographic channeling index — fire chimney effect on steep valleys
+chimney_effect,Topography,Binary chimney effect indicator (slope + valley alignment)
+twi_proxy,Topography,Topographic Wetness Index proxy — soil moisture accumulation potential

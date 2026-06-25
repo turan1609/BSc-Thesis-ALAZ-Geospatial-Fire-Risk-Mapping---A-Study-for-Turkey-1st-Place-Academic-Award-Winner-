@@ -1,0 +1,18 @@
+﻿Konu,Deger
+Veri Güvenilirlik — MED,8/10
+Veri Güvenilirlik — CON,7/10
+Veri Güvenilirlik — BLK,5/10
+ERA5→H3 Medyan Yoğunluk,4 grid/nokta
+ERA5 20+ Grid Nokta,301 nokta (11K grid)
+Gerçek Prevalance,"1/100,370"
+Prevalance 1:6,"%14.3 (14,339× şişirilmiş)"
+Cloud Cover BLK B/A,0.745 (çok yüksek)
+Tek Bildirimli Oran,%75
+VIF>10 Feature,11 feature
+|r|>0.7 Çift,47 çift
+Spatial ERA5 Örtüşme,%79
+Spatial H3 Örtüşme,%33
+CORINE Encoding,ÇIKAR (AUC düşürüyor)
+NDVI Durumu,YOK (perc_tree proxy)
+Perm Top 3 Feature,"FWI_Final, Wind, Dewpoint"
+Leakage Riski,ORTA

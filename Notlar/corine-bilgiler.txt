@@ -1,0 +1,45 @@
+111,230,0,77,255,Continuous urban fabric / Kesintisiz Kentsel Doku
+112,255,0,0,255,Discontinuous urban fabric / Kesintili Kentsel Doku
+121,204,77,242,255,Industrial or commercial units / Endüstriyel veya ticari birimler
+122,204,0,0,255,Road and rail networks and associated land / Karayolu ve demiryolu ağları ve bunlarla ilişkili araziler
+123,230,204,204,255,Port areas / Liman bölgeleri
+124,230,204,230,255,Airports / Havaalanları
+131,166,0,204,255,Mineral extraction sites / Mineral çıkarma sahaları
+132,166,77,0,255,Dump sites / Çöp dökme alanları
+133,255,77,255,255,Construction sites / İnşaat alanları
+141,255,166,255,255,Green urban areas / Yeşil kentsel alanlar
+142,255,230,255,255,Sport and leisure facilities / Spor ve eğlence tesisleri
+211,255,255,168,255,Non-irrigated arable land / Sulama yapılmayan ekilebilir arazi
+212,255,255,0,255,Permanently irrigated land / Sürekli sulanan arazi
+213,230,230,0,255,Rice fields / Pirinç tarlaları
+221,230,128,0,255,Vineyards / Üzüm bağları
+222,242,166,77,255,Fruit trees and berry plantations / Meyve ağaçları ve çilek tarlaları
+223,230,166,0,255,Olive groves / Zeytinlikler
+231,230,230,77,255,Pastures / Otlaklar
+241,255,230,166,255,Annual crops associated with permanent crops / Kalıcı bitkilerle ilişkili yıllık bitkiler
+242,255,230,77,255,Complex cultivation patterns / Karmaşık yetiştirme modelleri
+243,230,204,77,255,Land principally occupied by agriculture with significant areas of natural vegetation / Ağırlıklı olarak tarım yapılan ve önemli ölçüde doğal bitki örtüsüne sahip arazi.
+244,242,204,166,255,Agro-forestry areas / Tarım-orman alanları
+311,128,255,0,255,Broad-leaved forest / Geniş yapraklı orman
+312,0,166,0,255,Coniferous forest / İğne yapraklı orman
+313,77,255,0,255,Mixed forest / Karışık orman
+321,204,242,77,255,Natural grasslands / Doğal otlaklar
+322,166,255,128,255,Moors and heathland / Bozkırlar ve fundalıklar
+323,166,230,77,255,Sclerophyllous vegetation / Sklerofil bitki örtüsü
+324,166,242,0,255,Transitional woodland-shrub / Geçiş dönemi orman-çalılık
+331,230,230,230,255,Beaches dunes sands / Plajlar, kum tepeleri, kumlar
+332,204,204,204,255,Bare rocks / Çıplak kayalar
+333,204,255,204,255,Sparsely vegetated areas / Seyrek bitki örtüsüne sahip alanlar
+334,0,0,0,255,Burnt areas / Yanmış alanlar
+335,166,230,204,255,Glaciers and perpetual snow / Buzullar ve sürekli kar
+411,166,166,255,255,Inland marshes / İç bataklıklar
+412,77,77,255,255,Peat bogs / Turba bataklıkları
+421,204,204,255,255,Salt marshes / Tuz bataklıkları
+422,230,230,255,255,Salines / Tuzlu sular
+423,166,166,230,255,Intertidal flats / gelgit düzlükleri
+511,0,204,242,255,Water courses / Su yolları
+512,128,242,230,255,Water bodies / Su kütleleri
+521,0,255,166,255,Coastal lagoons / Kıyı lagünleri
+522,166,255,230,255,Estuaries / Haliçler
+523,230,242,255,255,Sea and ocean / Deniz ve okyanus
+999,255,255,255,255,NODATA / VERİ YOK

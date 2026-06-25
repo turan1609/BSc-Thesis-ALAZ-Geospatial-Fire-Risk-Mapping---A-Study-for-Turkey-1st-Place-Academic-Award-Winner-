@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALAZ | Orman Yangını Karar Destek Sistemi</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
+    <script src="https://unpkg.com/h3-js@3.7.2"></script>
+    <script src="https://unpkg.com/deck.gl@8.9.0/dist.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ============ KARŞILAMA MODALI ============ -->
+    <div id="welcome-modal">
+        <div class="modal-content">
+            <div class="brand">ALAZ</div>
+            <h2>Orman Yangını Erken Uyarı Sistemi
+                <span class="subtext">Türkiye Geneli 235K H3 Grid Dinamik Altyapısı</span>
+            </h2>
+
+            <p>Sisteme hoşgeldiniz. Lütfen analiz edilecek zamanı ve modeli belirleyin.</p>
+
+            <div class="form-row">
+                <div class="input-block">
+                    <label>Başlangıç Tarihi</label>
+                    <input type="date" id="start-date" value="2024-07-20">
+                </div>
+                <div class="input-block">
+                    <label>Bitiş Tarihi (Maks +7 Gün)</label>
+                    <input type="date" id="end-date" value="2024-07-23">
+                </div>
+            </div>
+
+            <label class="select-label">Hesaplama Modu:</label>
+            <select id="mode-select">
+                <option value="fwi">1. Sadece İklimsel Risk (FWI Ham Veri)</option>
+                <option value="alaz">2. Sadece ALAZ Modeli (Fiziksel Orman Zekası)</option>
+                <option value="compare">3. Karşılaştırma Modu (FWI vs ALAZ Kıyaslaması - Tek Gün!)</option>
+            </select>
+
+            <button id="start-btn" class="primary-btn">Simülasyonu Başlat</button>
+
+            <div id="loading-container" class="hidden">
+                <div class="spinner"></div>
+                <div id="loading-text">NetCDF (.nc) Dosyaları Okunuyor, Gridlere Basılıyor...</div>
+            </div>
+            <div id="error-box" class="hidden"></div>
+        </div>
+    </div>
+
+    <!-- ============ TEKİL MOD HARİTASI ============ -->
+    <div id="map-container-single" class="map-view hidden">
+        <div class="watermark-title" id="single-map-title">Mod: ALAZ</div>
+        <div id="map-single"></div>
+        <!-- Lejant (Tek Mod) -->
+        <div id="legend-single" class="legend-box hidden"></div>
+    </div>
+
+    <!-- ============ SPLIT HARİTA (KIYASLAMA) ============ -->
+    <div id="map-container-split" class="map-view hidden">
+        <div class="split-pane split-left">
+            <div class="watermark-title">SADECE FWI (İKLİM)</div>
+            <div id="map-left"></div>
+            <!-- Lejant Sol -->
+            <div id="legend-left" class="legend-box hidden"></div>
+        </div>
+        <div class="split-pane split-right">
+            <div class="watermark-title">A.L.A.Z. (YAPAY ZEKA)</div>
+            <div id="map-right"></div>
+            <!-- Lejant Sağ -->
+            <div id="legend-right" class="legend-box hidden"></div>
+        </div>
+        <div class="divider"></div>
+    </div>
+
+    <!-- ============ ZAMAN OYNATICISI ============ -->
+    <div id="timeline-panel" class="hidden glass-panel">
+        <label id="current-date-label">Yükleniyor...</label>
+        <input type="range" id="time-slider" min="0" max="0" value="0" step="1">
+        <button id="back-home-btn" class="secondary-btn">Geri Dön</button>
+    </div>
+
+    <!-- ============ HOVER TOOLTIP ============ -->
+    <div id="tooltip"></div>
+
+    <!-- ============ CLICK DETAY PANELİ ============ -->
+    <div id="detail-panel" class="hidden">
+        <div class="detail-panel-header">
+            <span>📋 Grid Detayı</span>
+            <button id="detail-close-btn">✕</button>
+        </div>
+        <div id="detail-content"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

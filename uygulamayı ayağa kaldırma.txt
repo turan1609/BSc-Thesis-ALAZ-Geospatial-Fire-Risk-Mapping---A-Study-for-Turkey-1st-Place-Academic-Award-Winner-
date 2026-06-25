@@ -1,0 +1,2 @@
+cd C:\Users\Yusuf\Desktop\Tez-bolgesel\Web_App\backend
+python app.py

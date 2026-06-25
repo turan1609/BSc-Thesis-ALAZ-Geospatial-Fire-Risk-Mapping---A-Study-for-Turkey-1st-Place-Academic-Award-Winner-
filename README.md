@@ -63,9 +63,8 @@ ALAZ/
 
 ### 2. Getting the Data
 Due to GitHub file size limits, the raw NetCDF meteorological files, trained XGBoost models, and massive H3 grid topologies are hosted externally.
-1. Download the required dataset from this link: **[Download ALAZ Data & Models](https://drive.google.com/drive/folders/1uqp8JH3X4KBxeQP077M5Gly81VT-m1Ai?usp=sharing)**
+1. Download this Folder. Because all files costs 40GB. GitHub can't afford it.**[Download ALAZ Data & Models](https://drive.google.com/drive/folders/1qozNJV2Rr5PAEyhwtKyn0PnO0TTbgp2_?usp=sharing)**
 2. Extract the downloaded `.zip` file.
-3. Place the extracted contents directly into the `data/` and `backend/models/` directories as shown in the structure above.
 
 ### 3. Setup & Execution
 
